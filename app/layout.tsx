@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import ToasterContext from "./context/ToasterContext";
 import AuthContext from "./context/AuthContext";
-import { Inter } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
 import "./globals.css";
+import ActiveStatus from "./components/ActiveStatus";
 
-const inter = Inter({ subsets: ["latin"] });
+const chakra_Petch = Chakra_Petch({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "MessengerApp",
@@ -18,9 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={chakra_Petch.className}>
         <AuthContext>
           <ToasterContext />
+          <ActiveStatus />
           {children}
         </AuthContext>
       </body>

@@ -22,10 +22,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/*
-NEXT_PUBLIC_PUSHER_APP_KEY=
-PUSHER_APP_ID=
-PUSHER_SECRETE=
-
-*/
